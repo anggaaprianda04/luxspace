@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import logoLuxspace from '../assets/images/content/logo.png'
 
 export default function Header() {
   return (
@@ -8,7 +7,7 @@ export default function Header() {
         <div className="flex items-center flex-stretch">
           <div className="flex items-center w-56">
             <img
-              src={logoLuxspace}
+              src={`/images/logo.png`}
               alt="Luxspace | Fulfill your house with beautiful furniture"
             />
           </div>

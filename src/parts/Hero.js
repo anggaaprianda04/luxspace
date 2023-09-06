@@ -1,5 +1,4 @@
 import React from 'react'
-import bgImg from '../assets/images/content/image-section-1.png'
 
 export default function Hero() {
   return (
@@ -20,15 +19,33 @@ export default function Hero() {
                 >
                 </div>
             </div>
-            <div className="w-full md:relative md:w-1/2">
-                <div className="relative bg-red-500 hero-image">
+            <div className="inset-0 w-full md:relative md:w-1/2">
+                <div className="relative hero-image">
+                <div className="inset-0 z-10 bg-black overlay opacity-35"></div>
+                <div className="bottom-0 right-0 overlay md:inset-0">
+                    <button
+                    className="z-30 video hero-cta focus:outline-none modal-trigger"
+                    data-content='<div class="w-screen pb-56 md:w-88 md:pb-56 relative z-50">
+                    <div class="absolute w-full h-full">
+                        <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/3h0_v1cdUIA"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                    </div>'
+                    ></button>
+                </div>
                 <img
-                    src={bgImg}
+                    src={`/images/image-section-1.png`}
                     alt="hero 1"
-                    className="absolute inset-0 object-cover object-center w-full h-full bg-opacity-30 md:relative"
+                    className="absolute inset-0 object-cover object-center w-full h-full md:relative"
                 />
                 </div>
-      </div>
+            </div>
     </section>
   )
 }
